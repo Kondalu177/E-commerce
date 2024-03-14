@@ -15,14 +15,7 @@
         <!-- partial -->
         <div class="main-panel" >
         <div class="col-lg-12 grid-margin stretch-card">
-                 @if(session()->has('message'))
-
-                <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss='alert'>x</button>
-                    {{session()->get('message')}}
-
-                </div>
-                @endif
+                
                 <div class="card">
                   <div class="card-body">
                   @if(session()->has('message'))

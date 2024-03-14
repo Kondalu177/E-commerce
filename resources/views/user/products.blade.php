@@ -12,7 +12,7 @@
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Latest Products</h2>
-              <a href="products.html">view all products <i class="fa fa-angle-right"></i></a>
+              <!-- <a href="products.html">view all products <i class="fa fa-angle-right"></i></a> -->
             </div>
           </div>
           <!-- <div class="col-md-4">
@@ -111,16 +111,16 @@
               <a href="#"><img height="300" width="150" src="/productimage/{{$product->image}}" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>{{$product->product_name}}</h4></a>
-                <h6>{{$product->price}}</h6>
+                <h6>Rs:{{$product->price}}</h6>
                 <p>{{$product->description}}</p>
-                <ul class="stars">
+                <!-- <ul class="stars">
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
                 </ul>
-                <span>Reviews (32)</span>
+                <span>Reviews (32)</span> -->
               </div>
               <div>
                 <form action="{{url('addcart', $product->id)}}" method="POST">

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\product;
+use App\Models\orders;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +20,21 @@ Route::get('/', function () {
     $data = product::all();
     return view('user.user', compact('data'));
 });
+Route::get('/user', function () {
+    
+    $data = product::all();
+        $data = product::paginate(3);
+                $user = auth()->user();
+                $count= orders::where('phone',$user->phone)->count();
+    return view('user.user', compact('data','count'));
+});
+
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/user', [App\Http\Controllers\HomeController::class, 'user'])->name('user');
+// Route::get('/user', [App\Http\Controllers\HomeController::class, 'user'])->name('user');
 Route::get('/product', [App\Http\Controllers\AdminController::class, 'product'])->name('product');
 Route::post('/uploadproduct', [App\Http\Controllers\AdminController::class, 'uploadproduct'])->name('uploadproduct');
 Route::get('/getproduct', [App\Http\Controllers\AdminController::class, 'getproduct'])->name('getproduct');
