@@ -1,9 +1,9 @@
-User Login Deatils:
-        username: User@gmail.com,
-        password : user1234.
-Admin Login Deatils:
-        username: admin@gmail.com,
-        password : admin123.
+User Login Deatils:<br>
+        username: User@gmail.com,<br>
+        password : user1234.<br>
+Admin Login Deatils:<br>
+        username: admin@gmail.com,<br>
+        password : admin123.<br>
 
 
 
